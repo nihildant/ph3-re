@@ -1,0 +1,88 @@
+#title {
+  background-color: #e4e2e2;
+}
+#title .wrap {
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+}
+#title .wrap .witem{
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+#title .wrap .witem:not(:first-child){
+  display: none;
+}
+#title .wrap .witem1{
+  background-image: url(../img/tree.jpg);
+  color: white;
+}
+#title .wrap .witem2{
+  
+}
+#title .wrap .witem3{
+  
+}
+#title .wrap h2 {
+  order: 2;
+}
+#title .wrap h2 span{
+  display: none;
+}
+#title .wrap p {
+  order: 1;
+  color: white;
+  margin-bottom: 10px;
+}
+#title .wrap ul.arrow {
+  position: absolute;
+  bottom: 49%;
+  width: 1520px;
+  justify-content: space-between;
+  left: calc(50% - 760px);
+}
+#title .wrap ul.arrow li {
+  display: flex;
+}
+#title .wrap ul.arrow li a {
+  font-size: 0;
+  width: 30px;
+  height: 30px;
+}
+#title .wrap ul.arrow li:nth-child(1) a {
+  background-image: url(../img/arrow_back.svg);  
+  background-repeat: no-repeat;
+  background-position: 60% center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
+
+#title .wrap ul.arrow li:nth-child(2) a {
+  background-image: url(../img/arrow_forward.svg);
+  background-repeat: no-repeat;
+  background-position: 60% center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
+#title .wrap ul.dot {
+  position: absolute;
+  bottom: 50px;
+  justify-content: center;
+  width: 100%;
+}
+#title .wrap ul.dot li {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+#title .wrap ul.dot li a {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
