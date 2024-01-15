@@ -26,6 +26,12 @@ footer .wrap ul.pnb li a,footer .wrap div ul.fnb li a {
   display: block;
   line-height: 3;
 }
+footer .wrap ul.pnb li a{
+  
+}
+footer .wrap ul.pnb li a:hover{
+  color: #bfd3fe;
+}
 footer .wrap ul.pnb li:first-child a{
   padding-right: 15px;
 }
@@ -45,6 +51,9 @@ footer .wrap div ul.fnb li{
 }
 footer .wrap div ul.fnb li a{
   padding: 0 15px;
+}
+footer .wrap div ul.fnb li a:hover{
+  color: #bfd3fe;
 }
 footer .wrap div select{
 
@@ -76,6 +85,5 @@ margin-bottom: 20px;
 
 }
 footer .wrap  p {
-
   color: #ccc;
 }

@@ -4,6 +4,7 @@ section#promotion {
 section#promotion .wrap {
   height: 100%;
   gap: 15px;
+  perspective: 150px;
 }
 section#promotion .wrap h2 {
   
@@ -13,69 +14,90 @@ section#promotion .wrap p {
 }
 section#promotion .wrap iframe {
   border: 1px solid #333;
+  animation-name: test;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  transition: all 1s;
 }
-
+@keyframes test{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+section#promotion .wrap iframe:hover{
+  box-shadow: 5px 5px black;
+}
 section#business {
+  background-color: #eee;
+  display: flex;
+  flex-direction: ;
+  align-items: center;
 }
 section#business .wrap {
-  
-  height: 100%;
+  /*! height: 100%; */
   gap: 15px;
+  width: 100%;
 }
 section#business .wrap h2 {
-  
+  text-align: center;
 }
 section#business .wrap p {
   margin-bottom: 30px;
   line-height: 1.3;
+  text-align: center;
+  /*! margin: 15px 0; */
 }
 section#business .wrap ul {
-  justify-content: space-around;
+  gap: 10px;
 }
 section#business .wrap ul li {
+  width: 50%;
+  position: relative;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 section#business .wrap ul li a {
-  perspective: 800px;
-  width: 700px;
+  color: white;
+}
+section#business .wrap ul li a::before{
+  content: "";
   height: 340px;
   display: block;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
-  display: flex;
-  color: white;
-  opacity: 0.8;
+  border-radius: 30px;
 }
-section#business .wrap ul li:nth-child(1) a {
+section#business .wrap ul li:nth-child(1) a::before{
   background-image: url(../img/busi_01.png);
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  background-color: #e4e2e2;
+  transition: all 1s;
+  width: 100%;
+  background-position: center;
 }
-section#business .wrap ul li:nth-child(1) a:hover {
-  opacity: 0.9;
+section#business .wrap ul li:nth-child(1) a:hover::before{
   transform: scale(1.1);
-  transition: 1s;
 }
-section#business .wrap ul li:nth-child(2) a {
+section#business .wrap ul li:nth-child(2) a::before{
   background-image: url(../img/busi_02.jpg);
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  transition: all 1s;
+  width: 100%;
+  background-position: center;
 }
-section#business .wrap ul li:nth-child(2) a:hover {
+section#business .wrap ul li:nth-child(2) a:hover::before{
   transform: scale(1.1);
-  transition: 1s;
-  opacity: 0.9;
 }
 section#business .wrap ul li a h3 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  position: absolute;
+  top: 31%;
+  left: 16%;
 }
 section#business .wrap ul li a p {
-  
+  position: absolute;
+  top: 48%;
+  left: 16%;
 }
 section#products{
   position: relative;
@@ -84,16 +106,19 @@ section#products{
   background-color: white;
 }
 section#products .wrap {
-  gap: 15px;
+  gap: 121px;
   justify-content: center;
+  align-items: center;
 }
 section#products .wrap h2 {
   display: none;
 }
 section#products .wrap ul {
-  position: absolute;
-  bottom: 15%;
-  right: 30%;
+  position: relative;
+  /*! bottom: 20%; */
+  /*! right: 30%; */
+  width: fit-content;
+  order: 2;
 }
 section#products .wrap ul::before{
   content: "";
@@ -118,7 +143,7 @@ section#products .wrap ul li:not(:first-child) a {
   padding: 0 10px;
 }
 section#products .wrap ul li a:hover{
-  color:blue;
+  color:#02139c;
 }
 section#products .wrap ul li a::before{
   content: "";
@@ -131,16 +156,80 @@ section#products .wrap ul li a::before{
   background-color: white;
   position: relative;
   z-index: 1;
+  transition: 2s;
+}
+/* 나중에 삭제수정해야할 부분 */
+@keyframes pp{
+  0%{
+  }
+  50%{
+    background-color: #1a4399;
+  }
+  70%{
+    background-color: #396cd7;
+  }
+  100%{
+    background-color: #396cd7;
+  }
+}
+  section#products .wrap ul li:nth-child(1) a::before{
+    /*  연습용  */
+  animation-name: pp;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 4s;
+  animation-direction: reverse;
+}
+  section#products .wrap ul li:nth-child(2) a::before{
+    /*  연습용  */
+  animation-name: pp;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 8s;
+  animation-direction: reverse;
+}
+  section#products .wrap ul li:nth-child(3) a::before{
+    /*  연습용  */
+  animation-name: pp;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 12s;
+  animation-direction: reverse;
+}
+  section#products .wrap ul li:nth-child(4) a::before{
+    /*  연습용  */
+  animation-name: pp;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 16s;
+  animation-direction: reverse;
+}
+  section#products .wrap ul li:nth-child(5) a::before{
+    /*  연습용  */
+  animation-name: pp;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 20s;
+  animation-direction: reverse;
+}
+  section#products .wrap ul li:nth-child(6) a::before{
+    /*  연습용  */
+  animation-name: pp;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 24s;
+  animation-direction: reverse;
 }
 section#products .wrap div {
-  transform: translateY(-50%);
+  /*! transform: translateY(-10%); */
+  order: 1;
 }
 section#products .wrap div article {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-gap: 20px;
-  background-color: #cccccc0a;
+  grid-template-rows: 1fr auto auto auto 1fr;
+  column-gap: 20px;
+  background-color: #6965650a;
 }
 section#products .wrap div article:not(:first-child){
   display: none;
@@ -148,10 +237,11 @@ section#products .wrap div article:not(:first-child){
 section#products .wrap div article h3 {
   display: flex;
   align-items: end;
+  grid-row: 2;
 }
 section#products .wrap div article figure{
   grid-column: 1;
-  grid-row: 1 /span 3;
+  grid-row: 1 /span 6;
   margin: 0 10px;
 }
 section#products .wrap div article figure img{
@@ -159,6 +249,7 @@ section#products .wrap div article figure img{
 }
 section#products .wrap div article p {
   
+  grid-row: 3;
 }
 section#products .wrap div article a {
   padding: 10px;
@@ -167,6 +258,7 @@ section#products .wrap div article a {
   border: 1px solid;
   color: #949494;
   transition: 1s;
+  grid-row: 4;
 }
 section#products .wrap div article a:hover{
     color: white;
@@ -195,7 +287,6 @@ section#news .wrap ul {
 section#news .wrap ul.news_t {
   display: flex;
   justify-content: end;
-  margin-right: 40px;
 }
 section#news .wrap ul.news_t li{
   line-height: 2;

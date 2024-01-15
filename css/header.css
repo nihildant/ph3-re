@@ -2,10 +2,15 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
+  /*! background-color: rgba(0,0,0,0.7); */
 }
 header .wrap {
-  height: 100px;
+  height: 86px;
   align-items: center;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 0 0 30px 30px;
+  padding: 0 20px;
+  max-width: 1250px;
 }
 header .wrap h1 {
   
@@ -25,7 +30,7 @@ header .wrap ul.gnb li {
 }
 header .wrap ul.gnb li a {
   display: block;
-  line-height: 100px;
+  line-height: 70px;
   padding: 0 50px;
   font-size: 18px;
   color: white;
