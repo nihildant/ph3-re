@@ -136,6 +136,10 @@
   .ham{
   display: flex;
   }
+  /* 사이드 */
+  aside{
+  display: none;
+  }
   /*  타이틀  */
   #title{
     min-height: auto;
